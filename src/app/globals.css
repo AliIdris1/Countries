@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.light-dark {
+  background-color: hsl(209, 23%, 22%);
+}
+
+.dark-mode {
+  color:hsl(208, 23%, 22%) ;
+}
+
+.bg-dark-mode {
+  background-color: hsl(207, 26%, 17%);
+}
+
+.bg-light-mode {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.height-detialsPage {
+  height: calc(100vh - 72px);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
