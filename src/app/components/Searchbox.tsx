@@ -64,9 +64,17 @@ const Searchbox = (props: Props) => {
         setNames([])
     };
 
-    window.onclick = () => {
-        setNames([])
-    }
+    useEffect(() => {
+        const handleClick = () => {
+            setNames([]);
+        };
+
+        window.addEventListener('click', handleClick);
+
+        return () => {
+            window.removeEventListener('click', handleClick);
+        };
+    }, []);
 
     const limitedDatabox = Names.slice(0, 10);
 
